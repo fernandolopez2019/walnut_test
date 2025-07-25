@@ -40,14 +40,16 @@
   </head>
   <body>
     <div>
-      <button class="Start">Start</button>
-
-      <div class="dropdown-menu">
-        <button class="menu">Options</button>
-        <div class="menu-content">
-          <a href="#">Pick up mode</a>
-        </div>
-      </div>
+      <button class="Start" id="Start">Start</button>
+      <button class="Stop" id="Stop">Stop</button>
+      <label for="g-size" style="background-color: rgb(221, 218, 218)"
+        >Select the Pick mode</label
+      >
+      <select id="g-size">
+        Pick mode
+        <option value="s3">3x3</option>
+        <option value="s4">4x4</option>
+      </select>
     </div>
     <div class="container-grid">
       <div class="item sp1 wh">1</div>
@@ -76,5 +78,62 @@
       <div class="item sp24 wh">24</div>
       <div class="item sp25 wh">25</div>
     </div>
+    <!--<div><img src="/squirell.png" alt="" /></div>-->
+    <script>
+      document.getElementById("Start").addEventListener("click", () => {
+        const cellsyw = document.querySelectorAll(".yw");
+        const random = Math.floor(Math.random() * cellsyw.length);
+        const randomitem = cellsyw[random];
+
+        randomitem.style.backgroundImage = "url('/squirell.png')";
+        randomitem.style.backgroundSize = "cover";
+        randomitem.style.backgroundPosition = "center";
+        randomitem.dataset.target = "true";
+      });
+
+      let counting = true;
+      let find = false;
+      let counthover = 0;
+      let countyw = 0;
+      let countwh = 0;
+
+      const StopBt = document.querySelector(".Stop");
+      const cells = document.querySelector(".item");
+
+      cells.forEach((cell) => {
+        cell.addEventListener("mouseenter", () => {
+          if (!counting || find) return;
+          counthover++;
+          if (cell.classList.contains("yw")) {
+            countyw++;
+          } else if (cell.classList.contains("wh")) {
+            countwh++;
+          }
+
+          if (cell.dataset.target === "true") {
+            find = true;
+            alert(
+              "You found the image \n You looked into:",
+              { countyw },
+              " Yellow cells and ",
+              { countwh },
+              " White cells"
+            );
+          }
+        });
+      });
+      StopBt.addEventListener("click", () => {
+        counting = false;
+        if (!find) {
+          alert(
+            "Counting stopped. \n You looked into ",
+            { countyw },
+            " Yellow cells and ",
+            { countwh },
+            " White cells"
+          );
+        }
+      });
+    </script>
   </body>
 </html>
