@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head style="background-color: gray">
     <style>
       .container-grid {
         display: grid;
@@ -36,21 +36,50 @@
       .wh:hover {
         background-color: rgba(241, 181, 28, 255);
       }
+      .buttonspace {
+        /*width: fit-content;*/
+        align-items: center;
+        background-position: center;
+        margin: auto;
+      }
+      .btn {
+        background-color: #b880ff;
+
+        color: #2d2152;
+        width: 100px;
+        height: 75px;
+        align-items: center;
+        /*background-position: center;*/
+        justify-content: center;
+        border-radius: 10pz;
+        box-shadow: 10px;
+      }
+      .btn:hover {
+        color: #2d2152;
+        background-color: #ff56bc;
+      }
     </style>
+    <a href="https://www.walnut.io/"
+      ><img
+        style="width: 300px; height: 100px"
+        src="/walnut-logo.png"
+        alt="Go to official website of walnut.io"
+    /></a>
   </head>
-  <body>
-    <div>
-      <button class="Start" id="Start">Start</button>
-      <button class="Stop" id="Stop">Stop</button>
-      <label for="g-size" style="background-color: rgb(221, 218, 218)"
+  <body style="background-color: rgb(190, 184, 184)">
+    <div class="buttonspace">
+      <button class="Start btn" id="Start">Start</button>
+      <button class="Stop btn" id="Stop">Stop</button>
+      <!--<label for="g-size" style="background-color: rgb(221, 218, 218)"
         >Select the Pick mode</label
       >
       <select id="g-size">
         Pick mode
         <option value="s3">3x3</option>
         <option value="s4">4x4</option>
-      </select>
+      </select>-->
     </div>
+
     <div class="container-grid">
       <div class="item sp1 wh">1</div>
       <div class="item sp2 yw">2</div>
@@ -129,7 +158,7 @@
             find = true;
             counting = true;
             alert(
-              "You found the image!, \n You looked into: \n Yellow cells :" +
+              "You found the image!!! \n You looked into: \n Yellow cells :" +
                 countyw +
                 "\n White cells: " +
                 countwh +
