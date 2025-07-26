@@ -100,10 +100,12 @@
 
         const cellsyw = document.querySelectorAll(".yw");
         const random = Math.floor(Math.random() * cellsyw.length);
+        const degrees = Math.floor(Math.random() * 4) * 90;
         const randomitem = cellsyw[random];
         find = false;
 
         randomitem.style.backgroundImage = "url('/squirell.png')";
+        randomitem.style.transform = `rotate(${degrees}deg)`;
         randomitem.style.backgroundSize = "cover";
         randomitem.style.backgroundPosition = "center";
         randomitem.dataset.target = "true";
@@ -114,7 +116,6 @@
 
       cells.forEach((cell) => {
         cell.addEventListener("mouseenter", () => {
-          
           if (!counting || find) return;
           counthover++;
 
@@ -136,8 +137,6 @@
                 counthover
             );
           }
-
-          
         });
       });
 
