@@ -7,4 +7,5 @@ To ***Walnut.io*** it is so important to let you know that you and your team are
 I would like to understand better your needs and expectations, so I want to know the best day and time that we can meet to talk more about the asset that you are looking for. 
 
 Please let us know the best time to set up a meeting.
+
 If you have any question, feel free to reply to this email at your convenience.
