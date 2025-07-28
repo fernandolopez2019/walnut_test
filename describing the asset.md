@@ -16,7 +16,7 @@ If the user finds the picture, a pop-up message will automaticaly appear with th
 
 The user can restart the game pressing the Start button many times that he want.
 
-If you have any question, feel free to reply to this email at your convenience.
+If you have any question, feel free to reply to this email at your best convenience.
 
 Fernando López/ Support Technical Lead/ 
 
