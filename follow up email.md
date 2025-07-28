@@ -7,3 +7,7 @@ We will create an interactive grid with some yellow and whites cells applying an
 The process of developing of this project will take two months and through this time you will receive deliverables about the asset.
 
 If you have any question, feel free to reply to this email at your convenience.
+
+Fernando López/ Support Technical Lead
+
+# *Walnut.io*
