@@ -6,7 +6,7 @@ As we talked, we will develop this asset using web development languages like **
 We will create an interactive grid with some yellow and whites cells applying an hover effect, setting a picture in a random yellow cell for each time that the user press the Start button and counting the cells that the user will review before finding the cell with the picture.
 The process of developing of this project will take two months and through this time you will receive deliverables about the asset.
 
-If you have any question, feel free to reply to this email at your convenience.
+If you have any question, feel free to reply to this email at your best convenience.
 
 Fernando López/ Support Technical Lead
 
