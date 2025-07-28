@@ -8,4 +8,8 @@ I would like to understand better your needs and expectations, so I want to know
 
 Please let us know the best time to set up a meeting.
 
-If you have any question, feel free to reply to this email at your convenience.
+If you have any question, feel free to reply to this email at your best convenience.
+
+Fernando López/ Support Technical Lead
+
+# *Walnut.io*
