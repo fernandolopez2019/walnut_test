@@ -2,6 +2,9 @@
 <html>
   <head>
     <style>
+      .body {
+        background-color: rgb(190, 184, 184);
+      }
       .container-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -66,20 +69,13 @@
         alt="Go to official website of walnut.io"
     /></a>
   </head>
-  <body style="background-color: rgb(190, 184, 184)">
+  <body class="body">
+    <!--Buttons-->
     <div class="buttonspace">
       <button class="Start btn" id="Start">Start</button>
       <button class="Stop btn" id="Stop">Stop</button>
-      <!--<label for="g-size" style="background-color: rgb(221, 218, 218)"
-        >Select the Pick mode</label
-      >
-      <select id="g-size">
-        Pick mode
-        <option value="s3">3x3</option>
-        <option value="s4">4x4</option>
-      </select>-->
     </div>
-
+    <!--grid's cells-->
     <div class="container-grid">
       <div class="item sp1 wh"></div>
       <div class="item sp2 yw"></div>
@@ -114,12 +110,24 @@
       let counthover = 0;
       let countyw = 0;
       let countwh = 0;
+      //time
+      let seconds = 0;
+      let periodtm = 0;
 
       document.getElementById("Start").addEventListener("click", () => {
+        alert(
+          "An image will appear in the yellow cells, and your mission is to find the square with the image with the fewest checked squares.\n You can cancel the game by clicking the Stop button."
+        );
         let counting = true;
         counthover = 0;
         countyw = 0;
         countwh = 0;
+        seconds = 0;
+        //to count the seconds
+        clearInterval(periodtm);
+        periodtm = setInterval(() => {
+          seconds++;
+        }, 1000);
 
         const boxes = document.querySelectorAll(".item");
         boxes.forEach((cell) => {
@@ -163,7 +171,10 @@
                 "\n White cells: " +
                 countwh +
                 "\n Total: " +
-                counthover
+                counthover +
+                "\n Time: " +
+                seconds +
+                " seconds."
             );
           }
         });
@@ -179,7 +190,9 @@
               "\n White cells: " +
               countwh +
               "\n Total: " +
-              counthover
+              counthover +
+              seconds +
+                " seconds."
           );
         }
       });
